@@ -25,8 +25,7 @@ def bowl():
         scorebat=0
         thrownballs=0
         while thrownballs<balls:
-                print("Enter the run you want to score in this ball: ")
-                run=int(input())
+                run=int(input("Enter the run you want to score in this ball: "))
                 if run<=6:
                         compguess=random.randint(0,6)
                         if run==compguess:
@@ -129,11 +128,11 @@ if(tossch=="Heads"):
 else:
         toss="Tail"
 if(choice==tossch):
-                print ("You won the toss! Bat or Bowl? \n Choice: ")
-                userchoice=input()
-                if(userchoice=="Bat" or userchoice=="bat"):
+                userchoice=input("You won the toss! Bat or Bowl? \n Choice: ")
+                userchoice=userchoice.lower()
+                if(userchoice=="bat"):
                         bat()
-                elif userchoice=="Bowl" or userchoice=="bowl":
+                elif userchoice=="bowl":
                         bowl()
                 else:
                         print ("Wrong input")
