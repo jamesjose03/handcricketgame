@@ -106,7 +106,21 @@ for i in list:
          time.sleep(0.7)
 print()
 print (" Toss: Heads or Tails? \n Choice: ")
-choice=input()
+while True:
+	try:
+		choice=input()
+		if choice == "Heads" or choice == "heads":
+		    toss_called = "Heads"
+		    break
+		elif choice == "Tails" or choice == "tails":
+		    toss_called = "Tails"
+		    break
+		else:
+            		print("You entered invalid choice: ", choice)
+            		continue
+	except ValueError:
+        	print("You entered invalid key")
+        	continue
 myList=["Heads","Tails"]
 
 tossch=random.choice(myList)
